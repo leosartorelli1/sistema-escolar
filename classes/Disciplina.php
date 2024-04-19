@@ -1,15 +1,15 @@
 <?php 
-    class Turma{
+    class Disciplina{
 
         public $id;
-        public $descTurma;
-        public $ano;
+        public $nomeDisciplina;
+        public $cargaHoraria;
 
         public function inserir() {
 
-            $sql = "INSERT INTO tb_turmas (descTurma, ano) VALUES (
-                ' " . $this -> descTurma . " ',
-                ' " . $this -> ano . " '
+            $sql = "INSERT INTO tb_disciplinas (nomeDisciplina, cargaHoraria) VALUES (
+                ' " . $this -> nomeDisciplina . " ',
+                ' " . $this -> cargaHoraria . " '
             )";
 
             $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar', 'root', '');
@@ -18,11 +18,11 @@
 
             echo "Registro gravado com sucesso";
 
-            header("refresh:3; URL= turmas-listar.php");
+            header("refresh:3; URL= disciplinas-listar.php");
         }
 
         public function listar( ){
-            $sql = "SELECT * FROM tb_turmas"; 
+            $sql = "SELECT * FROM tb_disciplinas"; 
             $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar', 'root', '');
             $resultado = $conexao->query($sql);
 
