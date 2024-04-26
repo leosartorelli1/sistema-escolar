@@ -28,8 +28,8 @@ $lista = $disciplina->listar();
                 <td><?php echo $linha['nomeDisciplina'] ?></td>
                 <td><?php echo $linha['cargaHoraria']?></td>
                 <td>
-                    <a href="#">Atualizar</a>
-                    <a href="#">Excluir</a>
+                    <a href="disciplinas-editar.php?id=<?php echo $linha['id'] ?>">Atualizar</a>
+                    <a href="disciplinas-excluir.php?id=<?php echo $linha['id'] ?>">Excluir</a>
                 </td>
             </tr>
             <?php endforeach?>
