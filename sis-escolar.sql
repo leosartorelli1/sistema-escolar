@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2024 at 02:49 AM
+-- Generation Time: May 03, 2024 at 03:07 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,8 +38,12 @@ CREATE TABLE `tb_disciplinas` (
 --
 
 INSERT INTO `tb_disciplinas` (`id`, `nomeDisciplina`, `cargaHoraria`) VALUES
-(8, 'funcionou', '190'),
-(11, ' tecnicas de programcao  ', ' 20 ');
+(8, 'Desenvolvimento Web 2 ', '80'),
+(11, 'Técnicas de Programação  ', '80'),
+(12, ' Matemática ', ' 80 '),
+(13, ' Estrutura de Dados ', ' 80 '),
+(14, ' Ingles I ', ' 20 '),
+(15, ' Ingles II ', ' 40 ');
 
 -- --------------------------------------------------------
 
@@ -58,11 +62,11 @@ CREATE TABLE `tb_turmas` (
 --
 
 INSERT INTO `tb_turmas` (`id`, `descTurma`, `ano`) VALUES
-(4, 'funcionou2', 'deu boa'),
-(5, ' dsm ', ' 1sem '),
-(6, ' dsm ', ' 2sem '),
-(7, ' dsm ', ' 4sem '),
-(8, ' dsm ', ' 6sem ');
+(4, 'DSM', '2025'),
+(5, 'GPI', '2022'),
+(6, 'GE', '2020'),
+(7, 'GTI', '2021'),
+(8, 'DSM', '2024');
 
 -- --------------------------------------------------------
 
@@ -115,7 +119,7 @@ ALTER TABLE `tb_usuarios`
 -- AUTO_INCREMENT for table `tb_disciplinas`
 --
 ALTER TABLE `tb_disciplinas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tb_turmas`
