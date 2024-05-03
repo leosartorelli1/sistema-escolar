@@ -1,3 +1,7 @@
+<?php
+    include "views/usuarios/usuario-verifica.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

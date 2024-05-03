@@ -13,10 +13,10 @@
 </head>
 <body>
     <h1>Sistema Academico</h1>
-    <h3>Nova turma </h3>
+    <h3>Editar disciplina </h3>
     <form action="disciplinas-editar-gravar.php" method="post">
         <input type="hidden" name="id" value="<?= $disciplina->id ?>">
-        <label for="descTurma">Turma:</label>
+        <label for="nomeDisciplina">Disciplina:</label>
         <input type="text" name="nomeDisciplina" value="<?= $disciplina->nomeDisciplina ?>">
         <br><br>
         <label for="cargaHoraria">Carga Horaria:</label>
