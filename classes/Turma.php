@@ -20,7 +20,7 @@
                 ' " . $this -> ano . " '
             )";
 
-            $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar', 'root', '');
+            include "Conexao.php";
 
             $conexao->exec($sql);
 
@@ -31,7 +31,7 @@
 
         public function listar( ){
             $sql = "SELECT * FROM tb_turmas"; 
-            $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar', 'root', '');
+            include "Conexao.php";
             $resultado = $conexao->query($sql);
 
             $lista = $resultado->fetchAll();
@@ -41,13 +41,13 @@
 
         public function excluir(){
             $sql = "DELETE FROM tb_turmas WHERE id=" . $this -> id;
-            $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar', 'root', '');
+            include "Conexao.php";
             $conexao->exec($sql);
         }
 
         public function carregar() {
             $sql = "SELECT * FROM tb_turmas WHERE id=" . $this-> id;
-            $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar', 'root', '');
+            include "Conexao.php";
             $resultado = $conexao->query($sql);
             $linha = $resultado->fetch();
             $this->descTurma = $linha['descTurma'];
@@ -60,7 +60,7 @@
                     ano = '$this->ano'
                     WHERE id = $this->id";
 
-            $conexao = new PDO('mysql:host=127.0.0.1;dbname=sis-escolar', 'root', '');
+            include "Conexao.php";
             $conexao->exec($sql);
         }
     

@@ -34,8 +34,9 @@ $lista = $turma->listar();
                 </td>
             </tr>
             <?php endforeach?>
-
-        
     </table>
+
+    <a href="../../index2.php">Voltar</a>
+
 </body>
 </html>
