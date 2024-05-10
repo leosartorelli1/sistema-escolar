@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2024 at 03:12 AM
+-- Generation Time: May 10, 2024 at 03:14 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,6 +35,14 @@ CREATE TABLE `tb_alunos` (
   `turma_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `tb_alunos`
+--
+
+INSERT INTO `tb_alunos` (`id`, `nome`, `foto`, `email`, `turma_id`) VALUES
+(1, 'João da Silva ', 'joao.png', 'joaodasilva@gmail.com', 7),
+(2, 'Luis Oliveira', 'luis.png', 'luisoliveira@gmail.com', 10);
+
 -- --------------------------------------------------------
 
 --
@@ -57,7 +65,9 @@ INSERT INTO `tb_disciplinas` (`id`, `nomeDisciplina`, `cargaHoraria`) VALUES
 (12, ' Matemática ', ' 80 '),
 (13, ' Estrutura de Dados ', ' 80 '),
 (14, ' Ingles I ', ' 20 '),
-(15, ' Ingles II ', ' 40 ');
+(17, ' Bando de Dados Relacional  ', ' 80 '),
+(18, '  ', '  '),
+(19, '  ', '  ');
 
 -- --------------------------------------------------------
 
@@ -78,9 +88,10 @@ CREATE TABLE `tb_turmas` (
 INSERT INTO `tb_turmas` (`id`, `descTurma`, `ano`) VALUES
 (4, 'DSM', '2025'),
 (5, 'GPI', '2022'),
-(6, 'GE', '2020'),
 (7, 'GTI', '2021'),
-(8, 'DSM', '2024');
+(8, 'DSM', '2024'),
+(9, ' GTI ', ' 2024 '),
+(10, ' GE ', ' 2028 ');
 
 -- --------------------------------------------------------
 
@@ -139,19 +150,19 @@ ALTER TABLE `tb_usuarios`
 -- AUTO_INCREMENT for table `tb_alunos`
 --
 ALTER TABLE `tb_alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_disciplinas`
 --
 ALTER TABLE `tb_disciplinas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tb_turmas`
 --
 ALTER TABLE `tb_turmas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tb_usuarios`

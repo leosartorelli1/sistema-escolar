@@ -35,6 +35,8 @@ $lista = $disciplina->listar();
             <?php endforeach?>
     </table>
 
+    <a href="disciplinas-inserir.html">Nova Disciplina</a> <br> <br>
+
     <a href="../../index2.php">Voltar</a>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <body>
     <h1>Sistema Academico</h1>
 <ul>
-    <li><a href="#">Alunos</a></li>
+    <li><a href="views/alunos/alunos-listar.php">Alunos</a></li>
     <li><a href="views/turmas/turmas-listar.php">Turmas</a></li>
     <li><a href="views/disciplinas/disciplinas-listar.php">Disciplinas</a></li>
  </ul>

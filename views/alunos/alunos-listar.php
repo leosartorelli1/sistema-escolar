@@ -1,9 +1,8 @@
 <?php 
 
-require_once "../../classes/Turma.php";
-$turma = new Turma();
-$lista = $turma->listar();
-
+    require_once "../../classes/Aluno.php";
+    $aluno = new Aluno();
+    $lista =  $aluno->listar();
 ?>
 
 <!DOCTYPE html>
@@ -18,27 +17,31 @@ $lista = $turma->listar();
     <table border ="1">
         <tr>
             <th>Código</th>
+            <th>Foto</th>
+            <th>Nome</th>
+            <th>E-mail</th>
             <th>Turma</th>
             <th>Ano</th>
-            <th>Ações</th>
         </tr>
 
         <?php foreach ($lista as $linha) : ?>
             <tr>
                 <td><?php echo $linha['id'] ?></td>
-                <td><?php echo $linha['descTurma'] ?></td>
+                <td><img src="../../img/<?=$linha['foto']?>" alt="foto" height="80"></td>
+                <td><?php echo $linha['nome']?></td>
+                <td><?php echo $linha['email']?></td>
+                <td><?php echo $linha['descTurma']?></td>
                 <td><?php echo $linha['ano']?></td>
                 <td>
-                    <a href="turmas-editar.php?id=<?php echo $linha['id'] ?>">Atualizar</a>
-                    <a href="turmas-excluir.php?id=<?php echo $linha['id'] ?>">Excluir</a>
+                    <a href="alunos-editar.php?id=<?php echo $linha['id'] ?>">Atualizar</a>
+                    <a href="alunos-excluir.php?id=<?php echo $linha['id'] ?>">Excluir</a>
                 </td>
             </tr>
             <?php endforeach?>
     </table>
 
-    <a href="turmas-inserir.html">Nova Disciplina</a> <br> <br>
+    <a href="alunos-inserir.php">Novo Aluno</a> <br> <br>
 
     <a href="../../index2.php">Voltar</a>
-
 </body>
 </html>
